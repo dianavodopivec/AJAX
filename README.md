@@ -1,1 +1,1 @@
-# AJAX
+# AJAX-EXERCISES
