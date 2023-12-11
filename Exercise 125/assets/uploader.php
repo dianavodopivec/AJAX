@@ -1,11 +1,13 @@
 <?php
-//hello
+//echo"Hola
+//var_dump($_FILES);
+
 var_dump($_FILES)
 if(isset($_FILES["file"])){
     $name = $_FILES["file"]["name"];
     $file = $_FILES["file"]["tmp_name"];
     $error = $_FILES["file"]["error"];
-    $destination = "../files/$name";
+    $destination = "../assets/files/$name";
     $upload = move_uploaded_file($file, $destination);
 
     if($upload){

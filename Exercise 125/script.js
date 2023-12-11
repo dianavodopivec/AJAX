@@ -19,7 +19,7 @@ const uploader = (file) => {
             console.error(message)
         }
     })
-    xhr.open("GET", "assets/uploader.php")
+    xhr.open("POST", "Exercise/assets/uploader.php")
     xhr.setRequestHeader("enc-type", "multipart/form-data")
     xhr.send(formData)
 }
@@ -31,8 +31,8 @@ const eventDelegation = () => {
       //Por cada FILE que traiga, se ejecutará la función UPLOADER.
       const files = Array.from(e.target.files); //🧠 NOTA: FOR EACH SOLO FUNCIONA CON OBJETOS ITERABLES.
       //🧠 También puedo usar un FOR.
-      files.forEach((file) => {
-        uploader(file)
+      files.forEach((e) => {
+        uploader(e)
       })
     }
   });
