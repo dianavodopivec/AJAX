@@ -1,13 +1,16 @@
 const d = document;
 const $main = d.querySelector("main");
 const $header = d.querySelector("header");
+const $footer = d.querySelector("footer");
 
-const recyclableConstructor = async (url) => {
+const recyclableHTML = async (url) => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw {
-        message: response.statusText || "Something went wrong!",
+        message:
+          response.statusText ||
+          "Joder tio, parece que tienes un maldito error!",
         status: response.status,
       };
     }
@@ -18,33 +21,23 @@ const recyclableConstructor = async (url) => {
   }
 };
 
-const printHome = () => {
-  d.addEventListener("DOMContentLoaded", async (e) => {
-    try {
-      const homeURL = "assets/home.html";
-      const homeHTML = await recyclableConstructor(homeURL);
-      $main.innerHTML = homeHTML;
-    } catch (error) {
-      console.error(error);
-    }
-  });
-};
-
-const printAnyOtherPage = () => {
-  d.addEventListener("click", async (e) => {
-    if (e.target.matches("a")) {
-      e.preventDefault();
-      const newPage = await recyclableConstructor(e.target.href);
-      $main.innerHTML = newPage;
-    }
-  });
-};
+const anyPage = () => {
+    d.addEventListener("click", async e => {
+        if(e.target.matches("a")){
+            e.preventDefault()
+            const anyPageURL = e.target.href
+            const anyPageHTML = await recyclableHTML(anyPageURL)
+            $main.innerHTML = anyPageHTML
+            console.dir(e.target)
+        }
+    })
+}
 
 const printNav = () => {
   d.addEventListener("DOMContentLoaded", async (e) => {
     try {
       const navURL = "assets/nav.html";
-      const navHTML = await recyclableConstructor(navURL);
+      const navHTML = await recyclableHTML(navURL);
       $header.innerHTML = navHTML;
     } catch (error) {
       console.error(error);
@@ -52,6 +45,31 @@ const printNav = () => {
   });
 };
 
+const printHome = () => {
+  d.addEventListener("DOMContentLoaded", async (e) => {
+    try {
+      const homeURL = "assets/home.html";
+      const homeHTML = await recyclableHTML(homeURL);
+      $main.innerHTML = homeHTML;
+    } catch (error) {
+      console.error(error);
+    }
+  });
+};
+
+const printFooter = () => {
+  d.addEventListener("DOMContentLoaded", async (e) => {
+    try {
+      const footerURL = "assets/footer.html";
+      const footerHTML = await recyclableHTML(footerURL);
+      $footer.innerHTML = footerHTML;
+    } catch (error) {
+      console.error(error);
+    }
+  });
+};
+
+anyPage()
 printNav();
-printHome();
-printAnyOtherPage();
+printHome()
+printFooter();
