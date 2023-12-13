@@ -8,12 +8,46 @@
   </head>
   <body>
     <main>
+        
+      <div class="container-div">
         <div class="container-form">
-            <div class="contact-form">
-                
-            </div>
+            <h2>SEND A MESSAGE</h2>
+            <form class="form">
+            <input 
+              type="text"
+              name="name"
+              placeholder="Name"
+              title="Only accepts letters!"
+              pattern="^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$"
+              required
+            />
+            <input 
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              title="Incorrect email address 🚫"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+            />
+            <input 
+              type="text"
+              name="subjet"
+              title="The subject to be addressed is required"
+              placeholder="Subject to be addressed"
+              required
+            />
+            <input 
+            type="text"
+            name="comments"
+            title="A comment is necessary"
+            placeholder="What do you need? ✍🏼"
+            required
+          />
+            <input class="input-buttom" type="submit" value="Send" />
+          </form>
         </div>
-        <script src="script.js"></script>
+      </div>
+      <script src="script.js"></script>
     </main>
   </body>
 </html>
