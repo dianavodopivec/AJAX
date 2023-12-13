@@ -28,4 +28,3 @@ if(isset($_FILES["file"])){
 
     echo json_encode($res);
 }
-
