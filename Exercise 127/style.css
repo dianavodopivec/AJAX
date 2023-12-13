@@ -16,22 +16,92 @@ main {
   justify-content: center;
 }
 
-.container-form {
-  height: 700px;
-  width: 700px;
+.container-div {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border-radius: 30px;
-  border: 5px solid rgb(118, 212, 56);
+  border: 5px double rgb(138, 133, 189);
   backdrop-filter: blur(7px);
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.container-form:hover {
+.container-div:hover {
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+h2 {
+  font-size: 50px;
+  font-style: oblique;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 5px 5px 5px rgba(29, 132, 216, 0.5);
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100%;
+  text-align: center;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.input-buttom {
+  margin-top: 30px;
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(129, 30, 172, 0.783);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.input-buttom:hover {
+  letter-spacing: 3px;
+  background-color: hsl(271, 62%, 47%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(98, 75, 142) 0px 7px 29px 0px;
+}
+
+.input-buttom:active {
+  letter-spacing: 3px;
+  background-color: hsl(228, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus,
+textarea:focus {
+  color: rgb(255, 255, 255);
 }
