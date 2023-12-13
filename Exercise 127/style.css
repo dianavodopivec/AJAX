@@ -25,7 +25,7 @@ main {
   background-color: transparent;
   border-radius: 30px;
   border: 5px double rgb(138, 133, 189);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(9px);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -46,7 +46,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 5px 5px 5px rgba(29, 132, 216, 0.5);
+  text-shadow: 5px 5px 5px rgba(29, 132, 216, 0.5);  
 }
 
 input {
@@ -61,12 +61,18 @@ input {
   text-align: center;
   outline: none;
   color: rgb(255, 255, 255);
-  border: 2px solid rgb(200, 200, 200);
+  border: 2px double rgb(255, 255, 255);
   background-color: transparent;
   border-radius: 20px;
 }
 
-.input-buttom {
+.input-cells:hover{
+    border: 2px double rgba(230, 99, 226, 0.783);
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.input-button {
   margin-top: 30px;
   padding: 17px 40px;
   border-radius: 50px;
@@ -80,14 +86,14 @@ input {
   transition: all 0.5s ease;
 }
 
-.input-buttom:hover {
+.input-button:hover {
   letter-spacing: 3px;
   background-color: hsl(271, 62%, 47%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(98, 75, 142) 0px 7px 29px 0px;
 }
 
-.input-buttom:active {
+.input-button:active {
   letter-spacing: 3px;
   background-color: hsl(228, 80%, 48%);
   color: hsl(0, 0%, 100%);
@@ -104,4 +110,14 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   color: rgb(255, 255, 255);
+}
+
+/*/============== VALIDATORS ==============/*/
+
+.form{
+    width: 80%;
+    --form-ok-color: rgb(89, 174, 127);
+    --form-error-color: rgb(174, 89, 89);
+    margin-left: auto;
+    margin-right: auto;
 }
