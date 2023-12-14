@@ -10,9 +10,10 @@
     <main>
       <div class="container-div">
         <div class="container-form">
-            <h2>SEND A MESSAGE</h2>
-            <form class="form">
-            <input class="input-cells"
+          <h2>SEND A MESSAGE</h2>
+          <form class="form">
+            <input
+              class="input-cells"
               type="text"
               name="name"
               placeholder="Name"
@@ -20,7 +21,8 @@
               pattern="^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$"
               required
             />
-            <input class="input-cells"
+            <input
+              class="input-cells"
               type="email"
               name="email"
               placeholder="E-mail"
@@ -28,23 +30,18 @@
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               required
             />
-            <input  class="input-cells"
+            <input
+              class="input-cells"
               type="text"
               name="subjet"
               title="The subject to be addressed is required"
               placeholder="Subject to be addressed"
               required
             />
-            <input class="input-cells"
-            type="text"
-            name="comments"
-            title="A comment is necessary"
-            placeholder="What do you need? ✍🏼"
-            required
-          />
+            <textarea name="comments" cols="50" rows="5" placeholder="Write your comments" required></textarea>
             <input class="input-button" type="submit" value="Send" />
             <div class="contact-form-response none">
-                <p>The data has been sent correctly 💜</p>
+              <p>The data has been sent correctly 💜</p>
             </div>
           </form>
         </div>
