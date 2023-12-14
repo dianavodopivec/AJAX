@@ -26,27 +26,34 @@ main {
   border-radius: 30px;
   border: 5px double rgb(138, 133, 189);
   backdrop-filter: blur(9px);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 0.6s ease-in-out;
+  -webkit-transition: 0.6s ease-in-out;
+  -moz-transition: 0.6s ease-in-out;
+  -ms-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
 }
 
 .container-div:hover {
   transform: scale(1.05);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: 0.6s ease-in-out;
+  -webkit-transition: 0.6s ease-in-out;
+  -moz-transition: 0.6s ease-in-out;
+  -ms-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
 }
 
 h2 {
   font-size: 50px;
-  font-style: oblique;
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 5px 5px 5px rgba(29, 132, 216, 0.5);  
+  text-shadow: 5px 5px 5px rgba(29, 132, 216, 0.5);
 }
 
 input {
@@ -66,10 +73,10 @@ input {
   border-radius: 20px;
 }
 
-.input-cells:hover{
-    border: 2px double rgba(230, 99, 226, 0.783);
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+.input-cells:hover {
+  border: 2px double rgba(230, 99, 226, 0.783);
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 
 .input-button {
@@ -104,7 +111,7 @@ input {
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.747);
 }
 
 input:focus,
@@ -112,12 +119,89 @@ textarea:focus {
   color: rgb(255, 255, 255);
 }
 
+textarea {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100%;
+  text-align: center;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border: 2px double rgb(255, 255, 255);
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+textarea:hover {
+  border: 2px double rgba(230, 99, 226, 0.783);
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
 /*/============== VALIDATORS ==============/*/
 
-.form{
-    width: 80%;
-    --form-ok-color: rgb(89, 174, 127);
-    --form-error-color: rgb(174, 89, 89);
-    margin-left: auto;
-    margin-right: auto;
+.form {
+  padding: 0.8rem;
+  --form-ok-color: rgb(89, 174, 127);
+  --form-error-color: rgb(174, 89, 89);
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form input[type="submit"]{
+  cursor: pointer;
+}
+
+.form-error{
+  margin-top: -1rem;
+  font-size: 60px;
+  background-color: var(--form-error-color);
+  color: aliceblue;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.form-error.is-acitve{
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+  -webkit-animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.form [required]:valid {
+  border: 2px double rgba(251, 151, 247, 0.783);
+}
+
+.form [required]:invalid {
+  border: 2px double rgba(145, 79, 143, 0.783);
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
 }
