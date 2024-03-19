@@ -188,7 +188,7 @@ textarea:hover {
 }
 
 .form [required]:invalid {
-  border: 2px double rgba(145, 79, 143, 0.783);
+  border: 2px double rgba(203, 156, 201, 0.783);
 }
 
 .none {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stripe-style.css" />
+    <title>Exercise 130</title>
+  </head>
+  <body>
+    <h1>Checkout con Stripe</h1>
+    <main>
+      <section id="pizza" class="pizzas"></section>
+      <template id="pizza-template">
+        <figure class="pizza">
+          <img src="" alt="" />
+          <figcaption></figcaption>
+          <button>Buy</button>
+        </figure>
+      </template>
+    </main>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="stripe-checkout.js" type="module"></script>
+  </body>
+</html>
