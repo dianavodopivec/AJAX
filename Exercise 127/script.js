@@ -1,7 +1,8 @@
-const d = document;
+/*const d = document;
 const $form = d.querySelector("form");
 const $input = d.querySelectorAll(".contact-form[required]");
 
+//VALIDATOR FORM
 const formValidations = () => {
   // PRINTER
   $input.forEach((input) => {
@@ -32,4 +33,14 @@ const formValidations = () => {
   });
 };
 
-formValidations();
+formValidations();*/
+
+//ENVIAR FORMULARIO CON -FETCH- Y FORMSUBMIT
+
+/*const consumeFetch = async () => {
+  try {
+    const response = await fetch("https://formsubmit.co/dianavodopivec16@gmail.com")
+  } catch (error) {
+    
+  }
+}*/
