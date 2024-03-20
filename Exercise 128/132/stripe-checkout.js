@@ -65,7 +65,7 @@ d.addEventListener("click", (e) => {
         lineItems: [{price: priceId, quantity: 1}], 
         mode: "subscription",
         successUrl: "http://127.0.0.1:5500/Exercise%20130/stripe-success.html",
-        cancelUrl: "http://127.0.0.1:5500/Exercise%20130/stripe-cancel.html",
+        cancelUrl: "http://127.0.0.1:5500/Exercise%20128/132/stripe-cancel.html",
       })
       .then((result) => {
         if (result.error) {
