@@ -34,3 +34,9 @@ nav {
     position: absolute;
     top: 30px;
 }
+
+.cargador {
+    height: 100px;
+    width: 100px;
+    display: block;
+}
