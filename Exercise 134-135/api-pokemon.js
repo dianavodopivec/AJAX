@@ -11,7 +11,7 @@ const consumePokemonApi = async (url) => {
       $template = "",
       $prevLink,
       $nextLink;
-    //console.log(json);
+    console.log(json);
 
     //Manipulación de errores
     if (!respuesta.ok)
@@ -40,7 +40,10 @@ const consumePokemonApi = async (url) => {
           <figcaption>${pokemon.name}</figcaption>
           </figure>
           `;
-          $main.innerHTML = $template
+          $main.innerHTML = $template;
+          $prevLink = json.previous ? `<a href="${json.previous}">↩️</a>` : "";
+          $nextLink = json.next ? `<a href="${json.next}">↪️</a>` : "";
+          $links.innerHTML = $prevLink + "" + $nextLink
           
       } catch (error) {
         console.error(error);
@@ -62,3 +65,10 @@ const consumePokemonApi = async (url) => {
 document.addEventListener("DOMContentLoaded", (e) => {
   consumePokemonApi(pokeApi);
 });
+
+document.addEventListener("click", e => {
+  if(e.target.matches(".links a")) {
+    e.preventDefault();
+    consumePokemonApi(e.target.getAttribute("href"))
+  }
+})
