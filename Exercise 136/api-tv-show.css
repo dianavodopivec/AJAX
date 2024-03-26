@@ -32,6 +32,19 @@ h1 {
   color: #fff;
 }
 
+input {
+  height: 30px;
+  width: 250px;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
 .section-show {
     height: 100vh;
     width: 100%;
@@ -39,5 +52,12 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
     background-color: aliceblue;
+}
+
+.cargador {
+    height: 100px;
+    width: 100px;
+    display: block;
 }
