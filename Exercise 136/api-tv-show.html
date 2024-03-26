@@ -9,8 +9,19 @@
 <body>
     <header>
         <h1>Buscador Shows de TV</h1>
-        <input type="search" id="search" placeholder="Buscar shows ...">
+        <input type="search" id="search" placeholder="Buscar shows ..." autocomplete="off">
     </header>
-    <section class="section-show" id="shows-query"></section>
+    <section class="section-show" id="shows-query">
+    </section>
+    <template id="show-template">
+        <article class="shows">
+            <h3></h3>
+            <div></div>
+            <img>
+            <img src="fade-stagger-squares.svg" alt="">
+            <a href=""></a>
+        </article>
+    </template>
+    <script src="api-tv-show.js"></script>
 </body>
 </html>

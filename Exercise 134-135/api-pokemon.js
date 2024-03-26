@@ -5,7 +5,7 @@ const pokeApi = "https://pokeapi.co/api/v2/pokemon/";
 
 const consumePokemonApi = async (url) => {
   try {
-    $main.innerHTML = `<img class="cargador" src="bouncing-circles.svg" alt="Cargando...">`;
+    $main.innerHTML = `<img src="fade-stagger-squares.svg" alt="">`;
     let respuesta = await fetch(url),
       json = await respuesta.json(),
       $template = "",
