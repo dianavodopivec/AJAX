@@ -7,6 +7,9 @@ document.addEventListener("keypress", async e => {
         //console.log(e.key) ((.keyCode nos dirá que número de tecla estamos apretando.))
         if(e.key === "Enter") {
             try {
+                if(e.target.value === ""){
+                    return
+                }
                 $shows.innerHTML = `<img class="cargador" src="fade-stagger-squares.svg" alt="Cargando...">`;
 
                 const query = e.target.value.toLowerCase()
@@ -22,7 +25,7 @@ document.addEventListener("keypress", async e => {
                   statusText: respuesta.status,
                 };
 
-                if(json.lenght === 0) {
+                if(json.length === 0) {
                     $shows.innerHTML = `<h2>No existe el show "${query}"</h2>`
                 } else {
                     json.forEach(e => {
